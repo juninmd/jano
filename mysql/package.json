@@ -1,0 +1,26 @@
+{
+  "name": "jano-mysql",
+  "version": "0.0.7",
+  "description": "Library that uses the `mysql` driver to keep code clean, simple, organized and with Promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juninmd/jano-mysql.git"
+  },
+  "author": "Antonio Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juninmd/jano-mysql/issues"
+  },
+  "keywords": [
+    "mysql",
+    "Promise"
+  ],
+  "homepage": "https://github.com/juninmd/jano-mysql#readme",
+  "dependencies": {
+    "mysql": "^2.13.0"
+  }
+}
