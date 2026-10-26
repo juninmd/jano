@@ -4,7 +4,7 @@
   "description": "Library that uses the `mysql` driver to keep code clean, simple, organized and with Promises",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",

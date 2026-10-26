@@ -60,12 +60,13 @@ nos dois drivers; os exemplos completos estão em [`mysql/README.md`](mysql/READ
 ## Testes
 
 ```bash
-cd mysql && npm test    # node test  ->  Sucesso
-cd oracle && npm test   # node test  ->  Sucesso
+cd mysql && npm test    # node --test
+cd oracle && npm test   # node --test
 ```
 
-Atenção: `test.js` nos dois pacotes é apenas um `console.log("Sucesso")`. Não há teste de
-comportamento nem conexão com banco, então `npm test` verde não prova que a biblioteca funciona.
+Atenção: os testes cobrem só `messageUtil` (`test/`); `test.js` continua sendo um `console.log("Sucesso")`.
+Não há teste de comportamento com driver mockado nem conexão com banco, então `npm test` verde ainda não prova
+que a biblioteca funciona.
 
 ## Lint e build
 
@@ -83,7 +84,6 @@ Registradas aqui para não serem lidas como funcionalidade pronta (nenhuma foi c
 - `oracle/index.js`: `beginTransaction` chama `connection.beginTransaction`, método que não existe
   na API do `oracledb`.
 - `oracle/index.js`: `executeTransaction` cria `newmu` mas passa `newMu` (identificador inexistente).
-- `messageUtil.setError` calcula `isSuccess` com `>= 200 || < 300`, que é sempre verdadeiro.
 
 ## Gates de CI
 

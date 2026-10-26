@@ -3,8 +3,8 @@ module.exports = {
         return {
             statusCode: statusCode,
             message: {
-                userMessage: '',
-                developerMessage: ''
+                userMessage: userMessage || '',
+                developerMessage: developerMessage || ''
             },
             database: {
                 parametros: parametros,
@@ -16,7 +16,7 @@ module.exports = {
     setError: (mu, statusCode, userMessage, developerMessage) => {
         mu.content = null;
         mu.statusCode = statusCode;
-        mu.isSuccess = statusCode >= 200 || statusCode < 300;
+        mu.isSuccess = statusCode >= 200 && statusCode < 300;
         mu.message = {
             developerMessage: developerMessage,
             userMessage: userMessage
